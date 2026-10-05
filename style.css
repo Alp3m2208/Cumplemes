@@ -1,0 +1,85 @@
+﻿:root {
+  --crema: #fff8fa;
+  --rosa-pastel: #f8dce9;
+  --lila-pastel: #e7e0ff;
+  --menta-pastel: #eaf7f3;
+  --durazno-pastel: #fff1e6;
+  --card-bg: #fffbfd;
+  --texto: #6d5d7a;
+  --titulo: #7c5a78;
+  --sombra: rgba(156, 130, 168, 0.15);
+  --borde: rgba(214, 189, 212, 0.4);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { background: radial-gradient(circle at top, var(--rosa-pastel), var(--crema)); color: var(--texto); line-height: 1.8; min-height: 100dvh; }
+.container { display: flex; flex-direction: column; gap: 2rem; margin: 0 auto; max-width: 960px; padding: clamp(1rem, 4vw, 2rem) clamp(0.8rem, 4vw, 1.2rem); width: 100%; }
+.hero { align-items: center; background: linear-gradient(135deg, #fff7fb 0%, #f7f4ff 100%); border: 1px solid var(--borde); border-radius: clamp(1rem, 4vw, 1.6rem); box-shadow: 0 25px 60px -30px var(--sombra); display: flex; flex-direction: column; gap: 0.6rem; overflow: hidden; padding: clamp(2rem, 6vw, 3rem) clamp(1rem, 5vw, 1.5rem); position: relative; text-align: center; }
+.hearts-bg { inset: 0; pointer-events: none; position: absolute; }
+.heart { animation: float 9s ease-in-out infinite; color: rgba(232, 182, 210, 0.6); font-size: clamp(1rem, 3vw, 1.4rem); opacity: 0.8; position: absolute; }
+.heart:nth-child(1) { left: 8%; top: 14%; animation-delay: 0s; }
+.heart:nth-child(2) { right: 10%; top: 20%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 18%; bottom: 12%; animation-delay: 4s; }
+.title { color: var(--titulo); font-family: "Dancing Script", cursive; font-size: clamp(2.2rem, 7.5vw, 5rem); font-weight: 600; line-height: 1.05; position: relative; z-index: 1; word-break: break-word; text-wrap: balance; }
+.subtitle { font-size: clamp(0.92rem, 3.5vw, 1.1rem); font-weight: 300; padding: 0 clamp(0.2rem, 3vw, 1rem); position: relative; z-index: 1; }
+.card { background: var(--card-bg); border: 1px solid var(--borde); border-radius: clamp(1rem, 3.5vw, 1.4rem); box-shadow: 0 30px 70px -40px var(--sombra); display: flex; flex-direction: column; gap: clamp(1rem, 4vw, 1.6rem); overflow: hidden; padding: clamp(1.6rem, 6vw, 3.2rem) clamp(1rem, 6vw, 2rem); position: relative; }
+.card::before { content: ""; height: 6px; left: 0; position: absolute; top: 0; width: 100%; }
+.poesia::before { background: linear-gradient(90deg, #f6d6e6, #e9e1ff); }
+.escrito::before { background: linear-gradient(90deg, #e9e1ff, #e6f6f1); }
+.galeria::before { background: linear-gradient(90deg, #e6f6f1, #fff1e6); }
+.card-header { align-items: center; display: flex; flex-direction: row; flex-wrap: wrap; gap: clamp(0.4rem, 2vw, 0.8rem); justify-content: center; text-align: center; }
+.card-header h2 { color: var(--titulo); font-family: "Dancing Script", cursive; font-size: clamp(1.6rem, 6vw, 2.8rem); font-weight: 600; line-height: 1.08; text-wrap: balance; }
+.decoration { color: rgba(196, 159, 192, 0.8); font-size: clamp(1.1rem, 4vw, 1.6rem); }
+.poem-content { align-items: center; display: flex; flex-direction: column; gap: clamp(0.8rem, 3vw, 0.9rem); text-align: center; padding: 0 clamp(0.2rem, 2vw, 1rem); }
+.poem-content p { font-size: clamp(0.98rem, 3.8vw, 1.16rem); font-weight: 300; max-width: min(680px, 90vw); }
+.written-content { display: flex; flex-direction: column; gap: clamp(0.9rem, 3vw, 1rem); margin: 0 auto; max-width: min(780px, 92vw); text-align: center; }
+.written-content p { font-size: clamp(0.96rem, 3.6vw, 1.05rem); font-weight: 300; }
+.galeria-text { text-align: center; font-weight: 300; font-size: clamp(0.96rem, 3.6vw, 1.05rem); padding: 0 clamp(0.2rem, 3vw, 1rem); }
+.grid-fotos { display: grid; gap: clamp(0.8rem, 3vw, 1rem); grid-template-columns: repeat(auto-fit, minmax(min(160px, 45vw), 1fr)); margin-top: 0.6rem; }
+.foto { border-radius: clamp(0.8rem, 2.5vw, 1rem); overflow: hidden; box-shadow: 0 25px 60px -40px var(--sombra); transition: transform 220ms ease, box-shadow 220ms ease; }
+.foto img { width: 100%; height: clamp(180px, 50vw, 240px); object-fit: cover; display: block; }
+.foto:hover { transform: translateY(-6px); box-shadow: 0 30px 70px -40px var(--sombra); }
+.hint { font-size: clamp(0.85rem, 3.2vw, 0.9rem); opacity: 0.7; text-align: center; padding: 0 clamp(0.4rem, 3vw, 1rem); }
+.footer { align-items: center; display: flex; flex-direction: column; gap: 0.2rem; padding: clamp(0.5rem, 3vw, 1rem) clamp(0.5rem, 3vw, 1rem) clamp(1.5rem, 4vw, 2rem); text-align: center; }
+.footer p:first-child { color: var(--titulo); font-family: "Dancing Script", cursive; font-size: clamp(1.6rem, 5.5vw, 2.6rem); line-height: 1.1; }
+.mini-text { font-size: clamp(0.92rem, 3.4vw, 0.95rem); font-weight: 300; opacity: 0.8; }
+.btn-musica { position: fixed; bottom: clamp(0.8rem, 4vw, 1.2rem); right: clamp(0.8rem, 4vw, 1.2rem); background: linear-gradient(135deg, #f7e6f2 0%, #e9e1ff 100%); color: var(--titulo); border: 1px solid var(--borde); border-radius: 999px; padding: clamp(0.5rem, 2.5vw, 0.6rem) clamp(0.8rem, 3vw, 1.1rem); font-size: clamp(0.88rem, 3.2vw, 0.95rem); font-weight: 500; box-shadow: 0 20px 50px -30px var(--sombra); cursor: pointer; transition: transform 200ms ease, box-shadow 200ms ease; z-index: 10; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.btn-musica:hover { transform: translateY(-4px); box-shadow: 0 25px 60px -30px var(--sombra); }
+@keyframes float { 0%, 100% { transform: translateY(0px) rotate(-6deg); opacity: 0.6; } 50% { transform: translateY(-10px) rotate(6deg); opacity: 0.9; } }
+@media (max-width: 480px) { .grid-fotos { grid-template-columns: repeat(auto-fit, minmax(min(140px, 44vw), 1fr)); } .foto img { height: clamp(150px, 46vw, 190px); } }
+
+/* Contenedor que alinea de forma horizontal las 3 fotos de cada fila */
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Cambia la dirección del flexbox de horizontal a vertical */
+    .fila-fotos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hace que cada foto ocupe casi todo el ancho de la pantalla del celular */
+    .fila-fotos .foto {
+        max-width: 100%;
+        width: 100%;
+        height: 250px; /* Puedes ajustar la altura para que se vean bien en vertical */
+        margin-bottom: 15px; /* Espacio entre cada foto */
+    }
+}
+
+/* Fuerza a todas las imágenes a llenar su caja perfectamente */
+.fila-fotos .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen proporcionalmente para que llene el espacio sin deformarse */
+    display: block;
+}
+
+@media (max-width: 768px) {
+  .grid-fotos { grid-template-columns: repeat(2, 1fr); }
+  .foto img { height: clamp(150px, 35vw, 200px); }
+}
+@media (max-width: 520px) {
+  .grid-fotos { grid-template-columns: 1fr; }
+  .foto img { height: clamp(180px, 60vw, 260px); }
+}
+

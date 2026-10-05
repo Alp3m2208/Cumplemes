@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumplemes, amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="hearts-bg">
+        <span class="heart">♡</span>
+        <span class="heart">♡</span>
+        <span class="heart">♡</span>
+      </div>
+      <h1 class="title">Feliz cumplemes, mi amor</h1>
+      <p class="subtitle">Un mes más de elegirnos, un mes más de querernos</p>
+    </header>
+    <section class="card poesia">
+      <div class="card-header">
+        <span class="decoration">✿</span>
+        <h2>Gracias...</h2>
+        <span class="decoration">✿</span>
+      </div>
+      <div class="poem-content">
+        <p>Gracias por enseñarme que puedo volar con los pies pegados al suelo 
+Por ofrecerme tus brazos para dar fin a las noches de desvelo 
+Por enseñarme los colores que no pude ver por estar ciego 
+Por compartirme tus alas para poder tocar el cielo
+
+</p>
+        <p>Han sido los mejores 30 días de mi vida
+Ahora hay besos en cicatrices que antes fueron heridas
+Tardes en las que reimos hasta que nos duele la barriga
+Creando recuerdos y vivencias que la memoria nunca olvida
+</p>
+        <p>Aquí tendrás mis brazos cuando nada más te abriga
+Acompáñame a crear historias con vivencias divertidas
+A perfumar recuerdos con risas que no se oxidan
+Podemos empezar si quieres por el resto de nuestras vidas</p>
+          <p>No hay día que no te ame ni observe tu simpleza 
+Lo dulce de tu sonrisa y lo eterno de tu belleza
+Que adore tus abrazos y mirada que me embeleza
+Gracias por erradicar cualquier rastro de tristeza</p>
+          <p>Acompáñame a descubrir todo aquello que nos espera
+A sonreírnos en las buenas y abrazar a los problemas 
+Gracias amor mío por al fin parar mi espera 
+Juro respetarte y amarte la vida entera
+</p>
+      </div>
+    </section>
+
+    <section class="card galeria">
+    <div class="card-header">
+        <span class="decoration">🌸</span>
+        <h2>Recuerdos que guardo con tanto cariño</h2>
+        <span class="decoration">🌸</span>
+    </div>
+
+    <!-- FILA 1: Las primeras 3 fotos -->
+    <div class="fila-fotos">
+        <div class="foto"><img src="fotos/Foto1.jpeg" alt="Recuerdo 1" loading="lazy"></div>
+        <div class="foto"><img src="fotos/Foto2.jpeg" alt="Recuerdo 2" loading="lazy"></div>
+        <div class="foto"><img src="fotos/Foto3.jpeg" alt="Recuerdo 3" loading="lazy"></div>
+    </div>
+
+    <!-- FILA 2: Las siguientes 3 fotos -->
+    <div class="fila-fotos">
+        <div class="foto"><img src="fotos/Foto4.jpeg" alt="Recuerdo 4" loading="lazy"></div>
+        <div class="foto"><img src="fotos/Foto5.jpeg" alt="Recuerdo 5" loading="lazy"></div>
+        <div class="foto"><img src="fotos/Foto6.jpeg" alt="Recuerdo 6" loading="lazy"></div>
+    </div>
+
+    
+</section>
+
+    <footer class="footer">
+      <p>Hecho con mucho amor para ti ♡</p>
+      <p class="mini-text">Que este mes sea el primero de muchos más</p>
+    </footer>
+  </main>
+  <audio id="musicaFondo" loop preload="auto" playsinline>
+    <source src="Musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+  <button class="btn-musica" id="btnMusica">▶ Reproducir música</button>
+  <script>
+    const audio = document.getElementById("musicaFondo");
+    const btn = document.getElementById("btnMusica");
+    btn.addEventListener("click", () => {
+      if (audio.paused) { audio.play(); btn.textContent = "⏸ Pausar música"; }
+      else { audio.pause(); btn.textContent = "▶ Reproducir música"; }
+    });
+    window.addEventListener("click", function activarMusica() {
+      audio.play().catch(() => {});
+      window.removeEventListener("click", activarMusica);
+    }, { once: true });
+  </script>
+</body>
+</html>
